@@ -1,11 +1,12 @@
 import json
 
 from agentpress.tool import Tool, ToolResult, openapi_schema, xml_schema
-from agent.tools.data_providers.LinkedinProvider import LinkedinProvider
-from agent.tools.data_providers.YahooFinanceProvider import YahooFinanceProvider
-from agent.tools.data_providers.AmazonProvider import AmazonProvider
-from agent.tools.data_providers.ZillowProvider import ZillowProvider
-from agent.tools.data_providers.TwitterProvider import TwitterProvider
+# from agent.tools.data_providers.LinkedinProvider import LinkedinProvider
+# from agent.tools.data_providers.YahooFinanceProvider import YahooFinanceProvider
+# from agent.tools.data_providers.AmazonProvider import AmazonProvider
+# from agent.tools.data_providers.ZillowProvider import ZillowProvider
+# from agent.tools.data_providers.TwitterProvider import TwitterProvider
+
 
 class DataProvidersTool(Tool):
     """Tool for making requests to various data providers."""
@@ -14,11 +15,7 @@ class DataProvidersTool(Tool):
         super().__init__()
 
         self.register_data_providers = {
-            "linkedin": LinkedinProvider(),
-            "yahoo_finance": YahooFinanceProvider(),
-            "amazon": AmazonProvider(),
-            "zillow": ZillowProvider(),
-            "twitter": TwitterProvider()
+             # {{removed entries for "linkedin", "yahoo_finance", "amazon", "zillow", "twitter"}}
         }
 
     @openapi_schema({

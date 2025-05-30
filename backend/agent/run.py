@@ -70,7 +70,7 @@ async def run_agent(
 
     # Initialize tools with project_id instead of sandbox object
     # This ensures each tool independently verifies it's operating on the correct project
-    thread_manager.add_tool(SandboxShellTool, project_id=project_id, thread_manager=thread_manager)
+    # thread_manager.add_tool(SandboxShellTool, project_id=project_id, thread_manager=thread_manager)
     thread_manager.add_tool(SandboxFilesTool, project_id=project_id, thread_manager=thread_manager)
     thread_manager.add_tool(SandboxBrowserTool, project_id=project_id, thread_id=thread_id, thread_manager=thread_manager)
     thread_manager.add_tool(SandboxDeployTool, project_id=project_id, thread_manager=thread_manager)
